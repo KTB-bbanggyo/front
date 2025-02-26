@@ -17,9 +17,18 @@
   /* 왼쪽 베이지 박스 */
   .left-content {
     flex: 1;
-    background-color: #fdf3e7; /* 포근한 베이지 */
+    /* background-color: --background-color;  */
     border-radius: 8px;
-    /* 원하는 스타일 추가 */
+    /* 배경 이미지 */
+    background-image: url("../images/backgroundBread.png");
+    background-size: contain; /* 이미지 크기에 맞게 설정 */
+    background-repeat: no-repeat; /* 이미지 반복 없도록 설정 */
+    background-position: center;  /* 중앙 정렬 */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   /* 오른쪽 지도 영역 */
@@ -30,3 +39,81 @@
     border-radius: 8px;
     overflow: hidden; /* iframe 테두리 둥근 모서리 처리 */
   }
+
+
+  /* 빵집 카드 */
+.card {
+  position: relative;     /* 하트 버튼 배치를 위해 position 사용 */
+  /* background-color: #f5f1e7; */
+  color: --font-main-color;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 8px;
+
+  width: 50%;
+}
+
+/* 하트 버튼(우측 상단) */
+.heart-btn {
+  position: absolute;
+  top: 3.5rem;
+  right: 1rem;
+  width: 24px;
+  height: 24px;
+
+  background: none;
+  background-image: url("../images/filledHeart.png");
+  background-size: contain; /* 이미지 크기에 맞게 설정 */
+  background-repeat: no-repeat; /* 이미지 반복 없도록 설정 */
+  background-position: center;  /* 중앙 정렬 */
+  border: none;
+
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* 빵집 이름 */
+.bakery-name {
+  margin-bottom: 2rem;
+  font-family: 'GoryeongStrawberry';
+  font-size: 2rem;
+  font-weight: bold;
+
+}
+
+/* 주소, 영업시간, 설명 */
+.bakery-address,
+.bakery-hours,
+.bakery-desc {
+  font-family: 'NanumSquareNeo';
+  font-size: 1rem;
+  margin: 8px 0;
+}
+
+/* 베이커리 메뉴 */
+.bakery-menu {
+  font-family: 'NanumSquareNeo';
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: --font-point-color;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+/* 태그 목록 */
+.bakery-tags {
+  margin-top: 12px;
+}
+
+/* 개별 태그 */
+.tag {
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 6px 12px;
+  margin-right: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
