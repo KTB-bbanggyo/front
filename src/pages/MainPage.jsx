@@ -4,7 +4,7 @@ import MainCard from '../components/MainCard.jsx';
 
 const MainPage = () => {
   return (
-    <div>
+    <div className='container'>
       <Header />
       <MainCard />
     </div>
