@@ -1,5 +1,6 @@
 import React from "react";
 import "../assets/styles/Header.css";
+import bread1 from "../assets/images/bread1.png"; // 이미지 import
 
 const Header = () => {
   return (
@@ -7,10 +8,9 @@ const Header = () => {
       {/* 헤더 영역 */}
       <header className="header">
         <div className="header-left">
-          <button className="menu-button">main</button>
           <img
             className="logo"
-            src="../assets/images/bread1.png" // 빵 아이콘 위치
+            src={bread1}// 빵 아이콘 위치
             alt="빵교 로고"
           />
           <h1 className="title">빵교</h1>
