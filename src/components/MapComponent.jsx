@@ -5,7 +5,7 @@ const MapComponent = ({ level = 3 }) => {
   const mapInstanceRef = useRef(null);
   const [scriptLoaded, setScriptLoaded] = useState(false);
   const [apiLoaded, setApiLoaded] = useState(false); // API 초기화 여부 추가
-  const [currentPosition, setCurrentPosition] = useState({ lat: 33.450701, lng: 126.570667 });
+
 
   // Kakao Maps 스크립트 동적 로딩
   useEffect(() => {
@@ -46,6 +46,7 @@ const MapComponent = ({ level = 3 }) => {
     // eslint-disable-next-line
   }, [scriptLoaded]);
 
+
   // 현재 위치 가져오기
   useEffect(() => {
     if (navigator.geolocation) {
@@ -65,17 +66,20 @@ const MapComponent = ({ level = 3 }) => {
     }
   }, []);
 
+
   // API 로드 완료 후 지도 생성
   useEffect(() => {
     if (apiLoaded && mapContainerRef.current) {
       console.log("지도 생성 시작...");
       if (!mapInstanceRef.current) {
+
         const container = mapContainerRef.current;
         const options = {
           center: new window.kakao.maps.LatLng(currentPosition.lat, currentPosition.lng),
           level: level,
         };
         mapInstanceRef.current = new window.kakao.maps.Map(container, options);
+
         console.log("지도 생성 완료!");
       } else {
         // 지도 중심 업데이트
@@ -86,6 +90,7 @@ const MapComponent = ({ level = 3 }) => {
     }
   }, [apiLoaded, currentPosition, level]);
 
+
   return (
     <div
       ref={mapContainerRef}
@@ -95,3 +100,4 @@ const MapComponent = ({ level = 3 }) => {
 };
 
 export default MapComponent;
+
