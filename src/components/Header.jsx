@@ -1,5 +1,5 @@
 import React from "react";
-import "./MainLayout.css"; // 스타일 분리 시 사용
+import "../assets/styles/Header.css";
 
 const Header = () => {
   return (
@@ -10,7 +10,7 @@ const Header = () => {
           <button className="menu-button">main</button>
           <img
             className="logo"
-            src="https://via.placeholder.com/40" // 빵 아이콘 위치
+            src="../assets/images/bread1.png" // 빵 아이콘 위치
             alt="빵교 로고"
           />
           <h1 className="title">빵교</h1>
@@ -20,10 +20,8 @@ const Header = () => {
           <div className="circle" />
         </div>
       </header>
-
-      {/* 메인 영역 */}
     </div>
   );
 };
 
-export default Layout;
+export default Header;
