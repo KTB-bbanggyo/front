@@ -5,7 +5,7 @@ import bread2 from "../assets/images/bread2.png"; // 이미지 import
 
 const Header = () => {
   return (
-    <div className="container">
+    <div >
       {/* 헤더 영역 */}
       <header className="header">
         <div className="header-left">
