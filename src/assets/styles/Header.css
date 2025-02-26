@@ -14,7 +14,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: #c8a06b; /* 상단 배경색(연갈색) */
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
   }
   
   /* 헤더 왼쪽(메뉴버튼, 로고, 타이틀) */
@@ -43,8 +43,10 @@
   
   /* 제목(빵교) */
   .title {
-    color: #fff;
-    font-size: 1.4rem;
+    font-family: 'Mungyeong-Gamhong-Apple';
+    font-weight: normal;
+    color: var(--font-main-color);
+    font-size: 1.8rem;
     margin: 0;
   }
   
