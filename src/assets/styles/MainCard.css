@@ -24,8 +24,8 @@
   
   /* 오른쪽 지도 영역 */
   .right-map {
-    width: 400px;
-    min-width: 300px;
+    width: 40vw;
+    min-width: 100px;
     background-color: #eee;
     border-radius: 8px;
     overflow: hidden; /* iframe 테두리 둥근 모서리 처리 */
