@@ -19,8 +19,6 @@ export const AuthProvider = ({ children }) => {
       localStorage.clear();
     };
 
-
-
     // 앱이 처음 로드될 때 Kakao 토큰 확인
     useEffect(() => {
         const kakaoKey = Object.keys(localStorage).find((key) => key.startsWith("kakao_"));
