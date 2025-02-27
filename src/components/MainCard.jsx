@@ -5,7 +5,7 @@ const MainCard = () => {
   const [liked, setLiked] = useState(false);
 
   const toggleLiked = () => {
-    console.log("clicked");
+    // console.log("clicked");
     setLiked((prev) => !prev);
   };
   return (
@@ -14,7 +14,7 @@ const MainCard = () => {
       <main >
 
             {/* 원하는 내용 삽입 (예: 빵집 목록, 정보 등) */}
-            <div className="card">
+            <div className="main-card">
               {/* 상단 하트 버튼 */}
               <button
                 className={`heart-btn ${liked ? "liked" : ""}`}

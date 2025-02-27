@@ -22,7 +22,7 @@
   }
   
   /* 제목(빵교) */
-  .title {
+  .header-title {
     font-family: 'Mungyeong-Gamhong-Apple';
     font-weight: normal;
     color: var(--font-main-color);
