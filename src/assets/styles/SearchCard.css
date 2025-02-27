@@ -1,0 +1,71 @@
+/* 전체 화면에 카드가 수직/수평 중앙 정렬되도록 설정 */
+.search-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* 수평 중앙 */
+    align-items: center;       /* 수직 중앙 */
+    height: 100vh;            /* 뷰포트 전체 높이 사용 */
+    margin: 0;
+    /* background-color: #fdfdfd; */
+  }
+  
+  /* 가운데 카드 */
+  .search-card {
+    width: 300px;              /* 카드 너비 */
+    min-height: 400px;         /* 카드 최소 높이 */
+    background-color: var(--background-color);
+    border-radius: 12px;        /* 모서리 둥글게 */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    
+    /* 내용물(로그인 텍스트) 중앙 정렬 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .search-title{
+    font-family: 'GoryeongStrawberry';
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    
+    position: relative;
+    top: 8px;
+  }
+
+  /* 사용자 입력 받는 창 */
+  .search-box{
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    resize: none;
+
+    /* 배경 이미지 */
+    background-image: url("../images/searchBackground.png");
+    background-size: contain; /* 이미지 크기에 맞게 설정 */
+    background-repeat: no-repeat; /* 이미지 반복 없도록 설정 */
+    background-position: center;  /* 중앙 정렬 */
+
+    width: 250px;
+    height: 250px;
+    padding: 10px;
+    margin-top: 2rem;
+    /* margin-bottom: 20px; */
+    font-size: 16px;
+  }
+
+  /* 전송 버튼 */
+  .send-btn {
+    width: 300px;              /* 카드 너비 */
+    min-height: 50px;         /* 카드 최소 높이 */
+    background-color: var(--background-color);
+    border-radius: 12px;        /* 모서리 둥글게 */
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    
+    margin-top: 1rem;
+  }
+  .send-btn hover{
+    background-color: #f5f1e7;
+  }
