@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "../assets/styles/SearchCard.css";
 
 const SearchCard = () => {
   // console.log(response);
   const [text, setText] = useState("");
-
+  const navigate = useNavigate();
+  const sendClicked = () => {
+    console.log(text);
+    navigate("/main");
+  }
   return (
     <div className="search-card-container">
       <div className="search-card">
@@ -21,8 +26,8 @@ const SearchCard = () => {
           />
         </form>
       </div>
-      <button className="send-btn">
-        보내기
+      <button className="send-btn" onClick={sendClicked}>
+        보 내 기
       </button>
     </div>
   );
