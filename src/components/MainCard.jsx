@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import "../assets/styles/MainCard.css";
 import dummy from "../assets/dummy.json";
 
-import BakeryList from "./BakeryList";
+import TagList from "./TagList";
 const MainCard = () => {
   // 하트 버튼 클릭 시 좋아요 표시
   const [liked, setLiked] = useState(false);
@@ -11,8 +11,23 @@ const MainCard = () => {
   };
 
   // 빵집 정보
-  const bakery = dummy.bakery.at(0).info[0];
+  let bakeryIdx=0;
+  let bakery = dummy.bakery.at(bakeryIdx).info[0];
+  const refreshClicked = () => {
+    if(bakeryIdx < dummy.bakery.length - 1){
+      bakeryIdx++;
+    }
+    else if(bakeryIdx === dummy.bakery.length - 1){
+      bakeryIdx = 0;
+    }
+    else{
+      console.log("bakeyIdx error");
+    }
+  }
+  
   console.log(bakery);
+
+
 
   return (
     <div className="left-content">
@@ -33,9 +48,12 @@ const MainCard = () => {
               
               {/* 태그 목록 */}
               <p className="bakery-menu">이런 곳이에요!</p>
-              <BakeryList bakery={bakery}/>
+              <TagList bakery={bakery}/>
               <div className="refresh">
-                <button className="refresh-btn">다른 빵집 보기</button>
+                <button 
+                  className="refresh-btn"
+                  onClick={refreshClicked}
+                >다른 빵집 보기</button>
               </div>
             </div>
 
