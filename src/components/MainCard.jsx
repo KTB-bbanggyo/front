@@ -62,8 +62,8 @@ const MainCard = () => {
   return (
     <div className="left-content">
       {/* 메인 콘텐츠 영역 */}
-      <main>
-        <div className="main-card">
+      <main className="main-card">
+        <div className="main-card-content">
           {/* 상단 하트 버튼 */}
           <button
             className={`heart-btn`}
@@ -72,19 +72,21 @@ const MainCard = () => {
           
           {/* 빵집 정보 */}
           <h2 className="bakery-name">{bakery.name}</h2>
+          <div className="bakery-info">
           <p className="bakery-address">{bakery.address}</p>
           <p className="bakery-desc">{bakery.desc}</p>
-          
+          </div>
           {/* 태그 목록 */}
-          <p className="bakery-menu">이런 곳이에요!</p>
-          <TagList bakery={bakery} />
-        </div>
-        
-        {/* 다른 빵집 보기 버튼 */}
-        <div className="refresh">
-          <button className="refresh-btn" onClick={refreshClicked}>
-            다른 빵집 보기
-          </button>
+          <div className="bakery-menu">
+            <p>이런 곳이에요!</p>
+            <TagList bakery={bakery} />
+          </div>
+          {/* 다른 빵집 보기 버튼 */}
+          <div className="refresh">
+            <button className="refresh-btn" onClick={refreshClicked}>
+              다른 빵집 보기
+            </button>
+          </div>
         </div>
       </main>
     </div>

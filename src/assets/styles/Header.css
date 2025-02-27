@@ -64,6 +64,9 @@
 
     border: none;
     background-image: url("../images/bread2.png");
+    background-size: contain; /* 이미지 크기에 맞게 설정 */
+    background-repeat: no-repeat; /* 이미지 반복 없도록 설정 */
+    background-position: center;  /* 중앙 정렬 */
     cursor: pointer;
   }
   

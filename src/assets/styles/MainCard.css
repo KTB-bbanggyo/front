@@ -26,11 +26,28 @@
     padding: 20px;
     border-radius: 8px;
     /* width: 0%; */
-    max-width: 80%; 
+    max-width: 70%;
+    /* max-width: 80%;  */
     /* min-width: 300px;   최소 300px */
     margin: auto;
   }
+  .main-card-content{
+    max-height: 90%;
+    min-height: 85%;
+    display: flex;
+    flex-direction: column;
+  }
   
+  /* 실제 내용들 */
+  .bakery-info{
+    width: 90%;
+    max-height: 200px;
+    margin-left: 5%;
+    overflow: scroll;
+  }
+  .bakery-info::-webkit-scrollbar{
+    display:none;
+  }
   
 /* 하트 버튼(우측 상단) */
 .heart-btn {
@@ -56,7 +73,7 @@
 }
 /* 빵집 이름 */
 .bakery-name {
-  margin-bottom: 2rem;
+  margin-bottom: 0.7rem;
   font-family: 'GoryeongStrawberry';
   font-size: 2rem;
   font-weight: bold;
@@ -78,11 +95,11 @@
   font-size: 0.9rem;
   font-weight: bold;
   color: var(--font-point-color);
-  margin-top: 2rem;
+  margin-top: 0.2rem;
 }
 /* 태그 목록 */
-.bakery-tags {
-  margin-top: 1rem;
+.bakery-menu{
+  margin-left: 10%;
 }
 
 /* 개별 태그 */
@@ -91,7 +108,7 @@
   background-color: #fdfdfd;
   border-radius: 16px;
   padding: 4px 12px;
-  margin: 4px 2px;
+  margin: 0px 2px 2px 0px;
   border: 1px solid #ccc;
   font-size: 0.8rem;
   font-weight: bold;
@@ -104,11 +121,13 @@
   justify-content: center;
   align-items: center;
   margin: 1.5rem auto;
+  width: 100%;
 }
 
 /* .refresh-btn에 고정된 width를 지정합니다. */
 .refresh-btn {
-  width: 300px;  /* 고정된 너비 */
+ /* 고정된 너비 */
+  width: 100%;
   padding: 8px 0;
   background-color: var(--font-point-color);
   color: white;

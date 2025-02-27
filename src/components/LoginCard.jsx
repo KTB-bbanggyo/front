@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import "../assets/styles/LoginCard.css";
+import kakaoLogo from "../assets/images/kakaoLogo.png";
 
 const LoginCard = () => {
   const navigate = useNavigate();
@@ -44,7 +45,12 @@ const LoginCard = () => {
     <div className="login-card-container">
       <div className="card">
         <h2 className="title">로그인</h2>
-        <button onClick={handleKakaoLogin}>카카오 로그인</button>
+        <button 
+          onClick={handleKakaoLogin}
+          className="login-button">
+          <img src={kakaoLogo} className="kakao-logo"/>
+          <div className="login-text">카카오 로그인</div>
+        </button>
       </div>
     </div>
   );

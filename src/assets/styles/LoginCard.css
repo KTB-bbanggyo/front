@@ -5,29 +5,54 @@
     align-items: center;       /* 수직 중앙 */
     height: 100vh;            /* 뷰포트 전체 높이 사용 */
     margin: 0;
-    /* background-color: #fdfdfd; */
   }
   
   /* 가운데 카드 */
   .card {
-    width: 300px;              /* 카드 너비 */
-    min-height: 400px;         /* 카드 최소 높이 */
+    width: var(--secondary-card-width);            /* 카드 너비 */
+    min-height: var(--secondary-card-height);         /* 카드 최소 높이 */
     background-color: var(--background-color);
     border-radius: 12px;        /* 모서리 둥글게 */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     
     /* 내용물(로그인 텍스트) 중앙 정렬 */
     display: flex;
-    /* justify-content: center; */
+    flex-direction: column;
     align-items: center;
   }
-  
+
   .title{
     font-family: 'GoryeongStrawberry';
-    font-size: 24px;
+    font-size: 2rem;
     font-weight: 600;
-    margin-bottom: 20px;
     
     position: relative;
-    top:-150px;
+    margin-top:calc(var(--secondary-card-height)*0.1);
   }
+
+
+/* 로그인 버튼 */
+.login-button{
+  width: calc(var(--secondary-card-width)*0.7);
+  height: 40px;
+  border: none;
+
+  background: none;
+  background-color: #ffe51f;
+  border-radius: 8px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+
+  margin-top: calc(var(--secondary-card-height)*0.25);
+}
+.kakao-logo{
+  width: 28px;
+  height: 24px;
+  margin-left: 8px;
+}
+.login-text{
+  font-size: 0.9rem;
+  margin-left:calc(var(--secondary-card-width)*0.17);
+}

@@ -1,0 +1,86 @@
+.homepage-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    line-height: 1.6;
+    font-family: 'NanumSquareNeo';
+  }
+  
+  /* 인트로 */
+.welcome{
+  font-family: 'GoryeongStrawberry';
+  font-weight: 100;
+  font-size: 2rem;
+  text-align: center;
+}
+
+  /* 빵교 가기 버튼 */
+  .homepage-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .homepage-title-button{
+    background-color: var(--background-color);
+    border: none;
+
+    padding: 8px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  .homepage-header h1 {
+    font-family: 'GoryeongStrawberry';
+    font-size: 24px;
+    font-weight: 100;
+    color: var(--font-main-color);
+  }
+  
+
+
+  .intro-section, .features-section, .tech-stack, .contribute-section, .contact-section {
+    margin-bottom: 40px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+  }
+  
+
+  /* 설명 영역 */
+  .about-section{
+    display: flex;
+    justify-content: center;
+    gap:8rem;
+  }
+
+  /* 기술 스택 */
+  .tech-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    background: #f8f8f8;
+    padding: 10px;
+    border-radius: 8px;
+
+    width: 400px;
+  }
+  
+  /* 문의 섹션 */
+  .contact-section {
+    font-size: 0.7rem;
+    line-height: 1;
+  }
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  
