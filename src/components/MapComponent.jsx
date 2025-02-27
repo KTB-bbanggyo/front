@@ -66,7 +66,6 @@ const MapComponent = ({ level = 3 }) => {
     }
   }, []);
 
-
   // API 로드 완료 후 지도 생성
   useEffect(() => {
     if (apiLoaded && mapContainerRef.current) {
@@ -90,7 +89,6 @@ const MapComponent = ({ level = 3 }) => {
     }
   }, [apiLoaded, currentPosition, level]);
 
-
   return (
     <div
       ref={mapContainerRef}
@@ -100,4 +98,3 @@ const MapComponent = ({ level = 3 }) => {
 };
 
 export default MapComponent;
-
