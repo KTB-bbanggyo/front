@@ -2,6 +2,10 @@ import React from "react";
 import "../assets/styles/SearchCard.css";
 
 const SearchCard = () => {
+    const sendClicked = () => {
+        console.log("clicked");
+        window.location.href="http://localhost:3000/";
+    }
   return (
     <div className="search-card-container">
       <div className="search-card">
@@ -11,6 +15,8 @@ const SearchCard = () => {
         <textarea className="search-box"></textarea>
         </form>
       </div>
+      <button className="send-btn" onClick={sendClicked}>보내기
+    </button>
     </div>
   );
 };
