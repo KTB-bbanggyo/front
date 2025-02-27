@@ -17,7 +17,7 @@
  
 
   /* 빵집 카드 */
-.card {
+.main-card {
   position: relative;     /* 하트 버튼 배치를 위해 position 사용 */
   /* background-color: #f5f1e7; */
   color: var(--font-main-color);
