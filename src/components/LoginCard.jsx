@@ -1,9 +1,9 @@
 import React from "react";
-import "../assets/styles/SecondaryCard.css";
+import "../assets/styles/LoginCard.css";
 
-const SecondaryCard = () => {
+const LoginCard = () => {
   return (
-    <div className="secondary-card-container">
+    <div className="login-card-container">
       <div className="card">
         <h2 className="title">로그인</h2>
         <div></div>
@@ -12,4 +12,4 @@ const SecondaryCard = () => {
   );
 };
 
-export default SecondaryCard;
+export default LoginCard;
