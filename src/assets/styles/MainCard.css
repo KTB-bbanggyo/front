@@ -17,23 +17,21 @@
  
 
   /* 빵집 카드 */
-.main-card {
-  position: relative;     /* 하트 버튼 배치를 위해 position 사용 */
-  /* background-color: #f5f1e7; */
-  color: var(--font-main-color);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  padding: 20px;
-  border-radius: 8px;
-
-  width: 80%;
-  /* height: 100%; */
-  margin: auto;
-}
-
+  .main-card {
+    position: relative;
+    color: var(--font-main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 8px;
+    /* width: 0%; */
+    max-width: 80%; 
+    /* min-width: 300px;   최소 300px */
+    margin: auto;
+  }
+  
+  
 /* 하트 버튼(우측 상단) */
 .heart-btn {
   position: absolute;
@@ -101,17 +99,17 @@
 }
 
 /* 새로고침 버튼 */
-.refresh{
-  width: 80%;
-
+/* 기존 .refresh는 width 속성을 제거합니다. */
+.refresh {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin:1.5rem auto;
-
+  margin: 1.5rem auto;
 }
+
+/* .refresh-btn에 고정된 width를 지정합니다. */
 .refresh-btn {
-  width: 100%;
+  width: 300px;  /* 고정된 너비 */
   padding: 8px 0;
   background-color: var(--font-point-color);
   color: white;
