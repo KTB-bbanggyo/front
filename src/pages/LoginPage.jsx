@@ -12,7 +12,7 @@ const LoginPage = () => {
     // 이미 로그인 상태라면 메인 페이지로 이동
     if (isAuthenticated) {
       console.log("이미 로그인됨, 메인 페이지로 이동");
-      navigate("/");
+      navigate("/search");
     }
   }, [isAuthenticated, navigate]);
 

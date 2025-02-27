@@ -32,7 +32,7 @@ const LoginCard = () => {
       success: (authObj) => {
         console.log("로그인 성공", authObj);
         login();
-        navigate("/");
+        navigate("/search");
       },
       fail: (err) => {
         console.error("로그인 실패", err);
