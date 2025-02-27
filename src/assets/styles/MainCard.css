@@ -17,10 +17,10 @@
  
 
   /* 빵집 카드 */
-.card {
+.main-card {
   position: relative;     /* 하트 버튼 배치를 위해 position 사용 */
   /* background-color: #f5f1e7; */
-  color: --font-main-color;
+  color: var(--font-main-color);
 
   display: flex;
   flex-direction: column;
@@ -78,7 +78,7 @@
   font-family: 'NanumSquareNeo';
   font-size: 0.9rem;
   font-weight: bold;
-  color: --font-point-color;
+  color: var(--font-point-color);
   margin-top: 2rem;
 }
 /* 태그 목록 */

@@ -14,7 +14,7 @@ const Header = () => {
             src={bread1}// 빵 아이콘 위치
             alt="빵교 로고"
           />
-          <h1 className="title">빵교</h1>
+          <h1 className="header-title">빵교</h1>
         </div>
         <div className="header-right">
           {/* 우측 원형(프로필 등) */}
