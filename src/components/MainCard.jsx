@@ -1,17 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../assets/styles/MainCard.css";
 import TagList from "./TagList";
 
 const MainCard = ({ bakeryList }) => {
   const [bakeryIdx, setBakeryIdx] = useState(0);
-  
-  // bakeryList가 비어 있으면 오류 방지
+  const [likedStates, setLikedStates] = useState({}); // 좋아요 상태 저장
+
   if (!bakeryList || bakeryList.length === 0) {
     return <div className="left-content">추천된 빵집이 없습니다.</div>;
   }
 
-  // 현재 bakeryList에서 해당 인덱스의 빵집 가져오기
   const bakery = bakeryList[bakeryIdx];
+
+  // 좋아요 버튼 클릭 시 상태 토글
+  const toggleLiked = () => {
+    setLikedStates((prev) => ({
+      ...prev,
+      [bakeryIdx]: !prev[bakeryIdx], // 현재 인덱스의 좋아요 상태 변경
+    }));
+  };
 
   // "다른 빵집 보기" 버튼 클릭 시 다음 빵집 표시
   const refreshClicked = () => {
@@ -23,7 +30,10 @@ const MainCard = ({ bakeryList }) => {
       <main className="main-card">
         <div className="main-card-content">
           {/* 상단 하트 버튼 */}
-          <button className="heart-btn"></button>
+          <button 
+            className={`heart-btn ${likedStates[bakeryIdx] ? "liked" : ""}`} 
+            onClick={toggleLiked}
+          ></button>
           
           {/* 빵집 정보 */}
           <h2 className="bakery-name">{bakery.name}</h2>
