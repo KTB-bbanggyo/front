@@ -5,6 +5,7 @@ import MainPage from '../pages/MainPage';
 import LoginPage from '../pages/LoginPage';
 import SearchPage from '../pages/SearchPage';
 import { AuthProvider } from '../context/AuthContext';
+import MyPage from '../pages/MyPage';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
             <Route path="/main" element={<MainPage />} />
             <Route path="/search" element={<SearchPage />} />   
           </Route>
-      </Routes>
+       </Routes>
       </AuthProvider>
     </Router>
   );
