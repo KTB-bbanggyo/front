@@ -29,8 +29,7 @@ const LoginCard = () => {
     window.Kakao.Auth.login({
       success: (authObj) => {
         console.log("로그인 성공", authObj);
-        // 로그인 성공 후 원하는 경로로 리다이렉션 (예: "/dashboard")
-        navigate("/success");
+        navigate("/");
       },
       fail: (err) => {
         console.error("로그인 실패", err);
