@@ -1,18 +1,82 @@
 {
-    "bakery":[
-        {"id": 1, "info": [
-            {"name": "카테부 빵집",
+    "bakery": [
+      {
+        "id": 1,
+        "info": [
+          {
+            "name": "카테부 빵집",
             "address": "경기도 성남시 분당구 판교역로 235",
             "desc": "판교역 근처에 위치한 빵집입니다.",
             "tags": ["bakery", "cakes", "pastries", "bread"]
-            }
-        ]},
-        {"id": 2, "info": [
-            {"name": "빵이야 빵집",
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "info": [
+          {
+            "name": "빵이야 빵집",
             "address": "경기도 성남시 분당구 대왕판교로 999",
             "desc": "맛있는 빵집입니다.",
             "tags": ["인스타 감성", "식빵", "페스츄리", "빨간색"]
-            }
-        ]}
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "info": [
+          {
+            "name": "달콤한 꿈 빵집",
+            "address": "서울특별시 강남구 테헤란로 123",
+            "desc": "고급스러운 분위기의 프리미엄 베이커리입니다.",
+            "tags": ["premium", "bread", "pastry", "coffee"]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "info": [
+          {
+            "name": "아침햇살 베이커리",
+            "address": "서울특별시 종로구 인사동길 45",
+            "desc": "따뜻한 아침을 선사하는 전통 베이커리입니다.",
+            "tags": ["traditional", "morning", "bread", "pastry"]
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "info": [
+          {
+            "name": "빵굽는 정원",
+            "address": "경기도 수원시 영통구 매탄동 67",
+            "desc": "자연을 닮은 신선한 빵을 만나는 곳입니다.",
+            "tags": ["fresh", "organic", "garden", "bakery"]
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "info": [
+          {
+            "name": "꿈꾸는 빵집",
+            "address": "인천광역시 남동구 구월로 77",
+            "desc": "창의적인 메뉴와 감각적인 인테리어를 자랑하는 베이커리입니다.",
+            "tags": ["creative", "dessert", "bread", "modern"]
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "info": [
+          {
+            "name": "향기로운 빵집",
+            "address": "부산광역시 해운대구 좌동로 88",
+            "desc": "향긋한 빵 냄새와 함께 다양한 메뉴를 즐길 수 있는 곳입니다.",
+            "tags": ["aromatic", "variety", "bread", "cafe"]
+          }
+        ]
+      }
     ]
-}
+  }
+  

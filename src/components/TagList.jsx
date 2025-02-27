@@ -1,7 +1,6 @@
 import React from "react";
-// import dummy from "../assets/dummy.json";
 
-const BakeryList = ({bakery}) => {
+const TagList = ({bakery}) => {
     // console.log(dummy);
     return (
         <div className="bakery-tags">
@@ -12,4 +11,4 @@ const BakeryList = ({bakery}) => {
     )
 }
 
-export default BakeryList;
+export default TagList;
