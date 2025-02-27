@@ -15,6 +15,7 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <script src="%PUBLIC_URL%/env.js"></script>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -29,6 +30,11 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script>
+      document.write(
+        `<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=${window.env.REACT_APP_KAKAO_JS_KEY}&libraries=services"><\/script>`
+      );
+    </script>    
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -40,8 +46,4 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
-  <script
-  type="text/javascript"
-  src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=6d6afe6913ccff3a81671b12875b1e01&autoload=false">
-  </script>
 </html>
