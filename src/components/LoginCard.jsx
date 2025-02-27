@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // 추가
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 import "../assets/styles/LoginCard.css";
 
 const LoginCard = () => {
-  const navigate = useNavigate(); // useNavigate 훅 사용
+  const navigate = useNavigate();
+  const { login } = useAuth();
 
   useEffect(() => {
     if (!window.Kakao) {
@@ -29,8 +31,8 @@ const LoginCard = () => {
     window.Kakao.Auth.login({
       success: (authObj) => {
         console.log("로그인 성공", authObj);
-        // 로그인 성공 후 원하는 경로로 리다이렉션 (예: "/dashboard")
-        navigate("/success");
+        login();
+        navigate("/");
       },
       fail: (err) => {
         console.error("로그인 실패", err);

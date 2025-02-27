@@ -46,6 +46,14 @@
 
   }
   
+  /* 로그아웃 버튼 */
+  .logout {
+    width: 30px;
+    height: 30px;
+    color: 'white';
+    margin-left: 1rem;
+  }
+
   /* 우측 원형(프로필) */
   .circle {
     width: 40px;
