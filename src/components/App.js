@@ -17,7 +17,8 @@ function App() {
           {/* 보호된 라우트 */}
           <Route element={<ProtectedRoute />}>
             <Route path="/main" element={<MainPage />} />
-            <Route path="/search" element={<SearchPage />} />   
+            <Route path="/search" element={<SearchPage />} />  
+            <Route path="/mypage" element={<MyPage />} />
           </Route>
        </Routes>
       </AuthProvider>
