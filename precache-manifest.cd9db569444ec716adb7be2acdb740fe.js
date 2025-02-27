@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "398eabe8849b5494177c83d921656387",
+    "revision": "5e7f15584fee8cc14ab5202341cd69df",
     "url": "/index.html"
   },
   {
-    "revision": "cd89aefa441dc204810a",
-    "url": "/static/css/main.1e1e4f83.chunk.css"
+    "revision": "1bc88bae43a263d39f18",
+    "url": "/static/css/main.a26d2d08.chunk.css"
   },
   {
-    "revision": "88a8823d1809fe802b8c",
-    "url": "/static/js/2.6ee17156.chunk.js"
+    "revision": "8d06223681da082a1ab2",
+    "url": "/static/js/2.708ea680.chunk.js"
   },
   {
-    "revision": "cd89aefa441dc204810a",
-    "url": "/static/js/main.11cd6b2c.chunk.js"
+    "revision": "1bc88bae43a263d39f18",
+    "url": "/static/js/main.ad9c4949.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -34,6 +34,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "9f61111962cc66e53f0c907d4fcc17cb",
     "url": "/static/media/filledHeart.9f611119.png"
+  },
+  {
+    "revision": "231c1ae948cc2c1dc55efa215e3cedb0",
+    "url": "/static/media/kakaoLogo.231c1ae9.png"
   },
   {
     "revision": "c55e90efee9ff090321a30c07398372e",

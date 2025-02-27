@@ -1,19 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.1e1e4f83.chunk.css",
-    "main.js": "/static/js/main.11cd6b2c.chunk.js",
-    "main.js.map": "/static/js/main.11cd6b2c.chunk.js.map",
+    "main.css": "/static/css/main.a26d2d08.chunk.css",
+    "main.js": "/static/js/main.ad9c4949.chunk.js",
+    "main.js.map": "/static/js/main.ad9c4949.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
     "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.6ee17156.chunk.js": "/static/js/2.6ee17156.chunk.js",
-    "static/js/2.6ee17156.chunk.js.map": "/static/js/2.6ee17156.chunk.js.map",
+    "static/js/2.708ea680.chunk.js": "/static/js/2.708ea680.chunk.js",
+    "static/js/2.708ea680.chunk.js.map": "/static/js/2.708ea680.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.a3eeb78ba600f93b2e5cc8a2b0ceab1c.js": "/precache-manifest.a3eeb78ba600f93b2e5cc8a2b0ceab1c.js",
+    "precache-manifest.cd9db569444ec716adb7be2acdb740fe.js": "/precache-manifest.cd9db569444ec716adb7be2acdb740fe.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.1e1e4f83.chunk.css.map": "/static/css/main.1e1e4f83.chunk.css.map",
+    "static/css/main.a26d2d08.chunk.css.map": "/static/css/main.a26d2d08.chunk.css.map",
     "static/media/MainCard.css": "/static/media/backgroundBread.14dddd49.png",
-    "static/media/Header.css": "/static/media/bread2.7256a140.png",
+    "static/media/bread1.png": "/static/media/bread1.fad5772f.png",
+    "static/media/bread2.png": "/static/media/bread2.7256a140.png",
     "static/media/MyCard.css": "/static/media/filledHeart.9f611119.png",
+    "static/media/kakaoLogo.png": "/static/media/kakaoLogo.231c1ae9.png",
     "static/media/SearchCard.css": "/static/media/searchBackground.c55e90ef.png"
   }
 }
