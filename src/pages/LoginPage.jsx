@@ -1,12 +1,12 @@
 import React from 'react';
-import SecondaryCard from '../components/SecondaryCard.jsx';
+import LoginCard from '../components/LoginCard.jsx';
 
-const MainPage = () => {
+const LoginPage = () => {
   return (
     <div>
-        <SecondaryCard />
+        <LoginCard />
     </div>
   );
 };
 
-export default MainPage;
+export default LoginPage;

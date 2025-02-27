@@ -1,5 +1,5 @@
 /* 전체 화면에 카드가 수직/수평 중앙 정렬되도록 설정 */
-.secondary-card-container {
+.login-card-container {
     display: flex;
     justify-content: center;   /* 수평 중앙 */
     align-items: center;       /* 수직 중앙 */
