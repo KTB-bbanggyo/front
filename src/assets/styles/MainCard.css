@@ -10,9 +10,10 @@
     background-position: center;  /* 중앙 정렬 */
 
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 2px solid rebeccapurple;
 }
  
 
@@ -25,11 +26,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   padding: 20px;
   border-radius: 8px;
 
-  width: 100%;
+  width: 80%;
   /* height: 100%; */
+  border: 2px solid rebeccapurple;
+  margin: auto;
 }
 
 /* 하트 버튼(우측 상단) */
@@ -96,4 +100,26 @@
   border: 1px solid #ccc;
   font-size: 0.8rem;
   font-weight: bold;
+}
+
+/* 새로고침 버튼 */
+.refresh{
+  width: 80%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:1.5rem auto;
+
+}
+.refresh-btn {
+  width: 100%;
+  padding: 8px 0;
+  background-color: var(--font-point-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
 }
