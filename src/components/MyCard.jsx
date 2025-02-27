@@ -1,37 +1,52 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../assets/styles/MyCard.css";
 import dummy from "../assets/dummy.json";
 
 const MyCard = () => {
-  const bakeries= dummy.bakery;
+  const bakeries = dummy.bakery;
 
-  // 하트 버튼 클릭 시 좋아요 표시
-  const [liked, setLiked] = useState(false);
-  const toggleLiked = () => setLiked(prev => !prev);
+  // 각 bakery의 좋아요 상태를 bakery id를 키로 하는 객체로 초기화 (초기값은 모두 false)
+  const initialLikedState = bakeries.reduce((acc, bakery) => {
+    const id = bakery.id;
+    acc[id] = true;
+    return acc;
+  }, {});
+
+  const [likedStates, setLikedStates] = useState(initialLikedState);
+
+  // 특정 bakery의 좋아요 상태를 토글하는 함수
+  const toggleLiked = (id) => {
+    setLikedStates((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }));
+  };
 
   return (
     <div className="my-list">
-    {bakeries.map((bakery) => (
-      <div className="my-card" key={bakery.info[0].id}>
-        <div className="my-card-info">
-          <span className="my-bakery-name">{bakery.info[0].name}</span>
-          <div className="my-bakery-tags">
-            {bakery.info[0].tags.map((tag, idx) => (
-              <span className="my-tag" key={idx}>
-                {tag}
-              </span>
-            ))}
+      {bakeries.map((bakery) => {
+        const id = bakery.id;
+        return (
+          <div className="my-card" key={id}>
+            <div className="my-card-info">
+              <span className="my-bakery-name">{bakery.info[0].name}</span>
+              <div className="my-bakery-tags">
+                {bakery.info[0].tags.map((tag, idx) => (
+                  <span className="my-tag" key={idx}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+            {/* 각 카드의 하트 버튼에 개별 상태에 따른 클래스 적용 */}
+            <button
+              className={`my-heart-btn ${likedStates[id] ? "myliked" : ""}`}
+              onClick={() => toggleLiked(id)}
+            />
           </div>
-        </div>
-
-        {/* 좋아요(하트) 버튼 */}
-        <button
-            className={`my-heart-btn ${liked ? "liked" : ""}`}
-            onClick={toggleLiked}
-          />
-      </div>
-    ))}
-  </div>
+        );
+      })}
+    </div>
   );
 };
 
