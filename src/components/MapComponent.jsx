@@ -70,7 +70,7 @@ const MapComponent = ({ level = 3 }) => {
   return (
     <div
       ref={mapContainerRef}
-      style={{ width: '100%', height: '400px' }}
+      style={{ width: '40vw', height: '40vh', borderRadius: '12px' }}
     />
   );
 
