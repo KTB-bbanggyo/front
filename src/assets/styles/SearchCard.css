@@ -35,10 +35,6 @@
   /* 사용자 입력 받는 창 */
   .search-box{
     flex: 1;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    resize: none;
 
     /* 배경 이미지 */
     background-image: url("../images/searchBackground.png");
@@ -53,8 +49,21 @@
     margin-top: 1rem;
     /* margin-bottom: 20px; */
     font-size: 16px;
-  }
 
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+  }
+.search-box-textbox{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+
+  margin-top:8px;
+  width: 90%;
+  height: 80%;
+}
   /* 전송 버튼 */
   .send-btn {
     width: var(--secondary-card-width);              /* 카드 너비 */

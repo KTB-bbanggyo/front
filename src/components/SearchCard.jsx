@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import "../assets/styles/SearchCard.css";
 
 const SearchCard = () => {
-  // console.log(response);
   const [text, setText] = useState("");
   const navigate = useNavigate();
   const sendClicked = () => {
@@ -16,14 +15,16 @@ const SearchCard = () => {
         <form>
           <h2 className="search-title">너에 대해서 알려줘</h2>
           {/* textarea에서 onChange 이벤트로 상태 업데이트 */}
-          <textarea
-            className="search-box"
-            value={text}
-            onChange={(e) => {setText(e.target.value)
-            }
-              
-            }
-          />
+          <div className="search-box">
+            <textarea
+              className="search-box-textbox"
+              value={text}
+              onChange={(e) => {setText(e.target.value)
+              }
+                
+              }
+            />
+          </div>
         </form>
       </div>
       <button className="send-btn" onClick={sendClicked}>
