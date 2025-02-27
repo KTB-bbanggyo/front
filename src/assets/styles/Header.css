@@ -17,8 +17,17 @@
   
   /* 로고 이미지 */
   .logo {
+    width: 50px;
     height: 45px;
-    margin-right: 1rem;
+    background-color: transparent;
+
+    margin-right: 0.5rem;
+    border: none;
+    background-image: url("../images/bread1.png");
+    background-size: contain; /* 이미지 크기에 맞게 설정 */
+    background-repeat: no-repeat; /* 이미지 반복 없도록 설정 */
+    background-position: center;  /* 중앙 정렬 */
+    cursor: pointer;
   }
   
   /* 제목(빵교) */
