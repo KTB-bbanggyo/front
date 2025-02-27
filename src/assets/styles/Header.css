@@ -15,17 +15,6 @@
     align-items: center;
   }
   
-  /* 메뉴 버튼 */
-  .menu-button {
-    background-color: #f5f0e8;
-    border: none;
-    padding: 0.5rem 1rem;
-    margin-right: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
   /* 로고 이미지 */
   .logo {
     height: 45px;
