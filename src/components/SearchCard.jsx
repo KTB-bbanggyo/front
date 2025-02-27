@@ -4,11 +4,11 @@ import "../assets/styles/SearchCard.css";
 const SearchCard = () => {
   return (
     <div className="search-card-container">
-      <div className="card">
+      <div className="search-card">
         <form>
-        <h2 className="title">너에 대해서 알려줘</h2>
-        <div className="search-box">dmdkd</div>
-        <textarea ></textarea>
+        <h2 className="search-title">너에 대해서 알려줘</h2>
+        {/* <div className="search-box">dmdkd</div> */}
+        <textarea className="search-box"></textarea>
         </form>
       </div>
     </div>
