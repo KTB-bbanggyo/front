@@ -30,7 +30,7 @@ const Header = () => {
       <header className="header">
         <div className="header-left">
           <button className="logo" onClick={logoClick}>
-            <img src={bread1} alt="빵교 로고" />
+            {/* <img src={bread1} alt="빵교 로고" /> */}
           </button>
           <h1 className="header-title">빵교</h1>
         </div>
@@ -44,9 +44,9 @@ const Header = () => {
           />
           {/* 우측 원형(프로필 등) */}
           <button className="circle" onClick={profileClick}>
-            <img src={bread2} alt="마이 페이지" />
+            {/* <img src={bread2} alt="마이 페이지" /> */}
           </button>
-          <img className="circle" src={bread2} alt="빵교 로고" />
+          {/* <img className="circle" src={bread2} alt="빵교 로고" /> */}
         </div>
       </header>
     </div>

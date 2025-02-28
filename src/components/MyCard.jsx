@@ -26,12 +26,13 @@ const MyCard = () => {
     <div className="my-list">
       {bakeries.map((bakery) => {
         const id = bakery.id;
+        if(bakery.info[0].like) {
         return (
           <div className="my-card" key={id}>
             <div className="my-card-info">
               <span className="my-bakery-name">{bakery.info[0].name}</span>
               <div className="my-bakery-tags">
-                {bakery.info[0].tags.map((tag, idx) => (
+                {bakery.info[0].keywords.map((tag, idx) => (
                   <span className="my-tag" key={idx}>
                     {tag}
                   </span>
@@ -45,6 +46,7 @@ const MyCard = () => {
             />
           </div>
         );
+      }
       })}
     </div>
   );

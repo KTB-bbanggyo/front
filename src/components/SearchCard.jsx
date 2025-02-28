@@ -1,72 +1,56 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import "../assets/styles/SearchCard.css";
 
 const SearchCard = () => {
-// "http://13.209.109.248:8000/", {
-    // 서버에서 가져온 데이터를 저장할 상태
-    const [data, setData] = useState(null);
-    // 로딩 상태 관리
-    const [loading, setLoading] = useState(true);
-    // 에러 상태 관리
-    const [error, setError] = useState(null);
+  const [text, setText] = useState("");
+  const [loading, setLoading] = useState(false); // 로딩 상태 추가
+  const navigate = useNavigate();
 
-  // GET 요청을 위한 함수
-  const fetchData = async () => {
+  const sendClicked = async () => {
+    if (!text.trim()) {
+      console.warn("입력값이 비어있습니다.");
+      return;
+    }
+
+    setLoading(true); // API 요청 시작 시 로딩 상태 활성화
+
+    const backUrl = "http://lb-bbanggyo-master-azone-1386370116.ap-northeast-2.elb.amazonaws.com:8000";
+    const url = `${backUrl}/recommend?prompt=${encodeURIComponent(text)}`;
+
     try {
-      setLoading(true);
-      // const response = await fetch("13.209.109.248:8000/",  {
-      //   method: "GET",
-      //   headers: {
-      //     "Content-Type": "application/html",
-      //     // 필요한 경우 인증 헤더 등 추가
-      //   },
-      // });
-      const response = await fetch("http://13.209.109.248:8000/");
-      const text = await response.text();
-      console.log("응답 텍스트:", text);
+      const response = await axios.get(url, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
-
-      if (!response.ok) {
-        throw new Error(`서버 에러! 상태 코드: ${response.status}`);
-      }
-
-      const result = await response.json();
-      setData(result);
-    } catch (err) {
-      console.error("GET 요청 에러:", err);
-      setError(err.message);
+      console.log("Response Data:", response.data);
+      navigate("/main", { state: { recommendation: response.data } });
+    } catch (error) {
+      console.error("Error fetching recommendation:", error);
     } finally {
-      setLoading(false);
+      setLoading(false); // API 요청 완료 시 로딩 상태 해제
     }
   };
-
-  // 컴포넌트가 마운트될 때 fetchData를 호출
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  // console.log(response);
-  const [text, setText] = useState("");
-
 
   return (
     <div className="search-card-container">
       <div className="search-card">
-        <form>
+        <form onSubmit={(e) => e.preventDefault()}>
           <h2 className="search-title">너에 대해서 알려줘</h2>
-          {/* textarea에서 onChange 이벤트로 상태 업데이트 */}
-          <textarea
-            className="search-box"
-            value={text}
-            onChange={(e) => {setText(e.target.value)
-            }
-              
-            }
-          />
+          <div className="search-box">
+            <textarea
+              className="search-box-textbox"
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+            />
+          </div>
         </form>
       </div>
-      <button className="send-btn">
-        보내기
+      <button className="send-btn" onClick={sendClicked} disabled={loading}>
+        {loading ? "로딩 중..." : "보 내 기"}
       </button>
     </div>
   );

@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Header from '../components/Header.jsx';
 import MainCard from '../components/MainCard.jsx';
 import MapComponent from '../components/MapComponent.jsx';
 import "../assets/styles/MainPage.css";
 
-
 const MainPage = () => {
+  const location = useLocation();
+  const recommendation = location.state?.recommendation || []; // API 응답 데이터
+
+  useEffect(() => {
+    console.log("Received recommendation data:", recommendation);
+  }, [recommendation]); // recommendation이 변경될 때마다 출력
+
   return (
     <div className='container'>
       <Header />
-      {/* 본문 레이아웃: 왼쪽 영역(베이지 박스), 오른쪽 지도 */}
       <div className="content-layout">
-        <MainCard />
+        <MainCard bakeryList={recommendation} />
         <div className="right-content">
           <MapComponent />
         </div>

@@ -1,8 +1,6 @@
 import React from 'react';
 import Header from '../components/Header.jsx';
 import MyCard from '../components/MyCard.jsx';
-// import MainCard from '../components/MainCard.jsx';
-// import MapComponent from '../components/MapComponent.jsx';
 import "../assets/styles/MyPage.css";
 
 
