@@ -5,6 +5,7 @@ import "../assets/styles/SearchCard.css";
 
 const SearchCard = () => {
   const [text, setText] = useState("");
+  const [loading, setLoading] = useState(false); // 로딩 상태 추가
   const navigate = useNavigate();
 
   const sendClicked = async () => {
@@ -13,7 +14,9 @@ const SearchCard = () => {
       return;
     }
 
-    const backUrl = "http://lb-bbanggyo-master-azone-1386370116.ap-northeast-2.elb.amazonaws.com:8000"; // 실제 백엔드 URL로 변경
+    setLoading(true); // API 요청 시작 시 로딩 상태 활성화
+
+    const backUrl = "http://lb-bbanggyo-master-azone-1386370116.ap-northeast-2.elb.amazonaws.com:8000";
     const url = `${backUrl}/recommend?prompt=${encodeURIComponent(text)}`;
 
     try {
@@ -24,11 +27,11 @@ const SearchCard = () => {
       });
 
       console.log("Response Data:", response.data);
-
-      // 데이터를 /main 페이지로 넘김
       navigate("/main", { state: { recommendation: response.data } });
     } catch (error) {
       console.error("Error fetching recommendation:", error);
+    } finally {
+      setLoading(false); // API 요청 완료 시 로딩 상태 해제
     }
   };
 
@@ -46,8 +49,8 @@ const SearchCard = () => {
           </div>
         </form>
       </div>
-      <button className="send-btn" onClick={() => sendClicked()}>
-        보 내 기
+      <button className="send-btn" onClick={sendClicked} disabled={loading}>
+        {loading ? "로딩 중..." : "보 내 기"}
       </button>
     </div>
   );

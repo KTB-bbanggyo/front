@@ -41,6 +41,7 @@
   /* 실제 내용들 */
   .bakery-info{
     width: 90%;
+    min-height: 200px;
     max-height: 200px;
     margin-left: 5%;
     overflow: scroll;
